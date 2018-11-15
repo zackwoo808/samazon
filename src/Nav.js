@@ -18,8 +18,7 @@ const Nav = ({ activeTab, onTabChange, itemCount }) => (
 			</ul>
 			<div className="App-nav-cart">
 				<i
-					className="fas fa-shopping-cart"
-					id="CartIcon"
+					className="fas fa-shopping-cart CartIcon"
 				/>
 				{itemCount}
 			</div>

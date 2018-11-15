@@ -3,6 +3,7 @@ import ItemPage from './ItemPage.js';
 import {itemsForSale} from './static-data.js';
 import Nav from './Nav.js';
 import React, { Component } from 'react';
+import Title from './Title.js';
 import './App.css';
 
 class App extends Component {
@@ -81,6 +82,7 @@ class App extends Component {
     let {activeTab} = this.state;
     return (
    	<div className="App">
+        <Title />
         <Nav
           activeTab={activeTab}
           onTabChange={this.handleTabChange}
