@@ -5,7 +5,7 @@ import React from 'react';
 // to a pure component every time it renders means that it will always
 // see "new" props, and therefore always re-render (needlessly).
 
-const Nav = ({ activeTab, onTabChange, itemCount }) => (
+const Nav = ({ activeTab, onTabChange, itemCount, totalPrice }) => (
 	<>
 		<nav className="App-nav">
 			<ul>
@@ -21,6 +21,9 @@ const Nav = ({ activeTab, onTabChange, itemCount }) => (
 					className="fas fa-shopping-cart CartIcon"
 				/>
 				{itemCount}
+				<div className="TotalPrice">
+					(${totalPrice})
+				</div>
 			</div>
 		</nav>
 	</>

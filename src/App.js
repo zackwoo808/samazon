@@ -9,7 +9,8 @@ import './App.css';
 class App extends Component {
   state = {
     activeTab: 0,
-    cart: []
+    cart: [],
+    totalPrice: 0
   }
 
   handleTabChange = (index) => {
@@ -20,7 +21,8 @@ class App extends Component {
 
   handleAddToCart = (item) => {
    this.setState({
-      cart: [...this.state.cart, item.id]
+      cart: [...this.state.cart, item.id],
+      totalPrice: this.state.totalPrice + item.price
    });
   }
 
@@ -30,7 +32,8 @@ class App extends Component {
       cart: [
         ...this.state.cart.slice(0, index),
         ...this.state.cart.slice(index + 1)
-      ]
+      ],
+      totalPrice: this.state.totalPrice - item.price
     });
   }
 
@@ -87,6 +90,7 @@ class App extends Component {
           activeTab={activeTab}
           onTabChange={this.handleTabChange}
           itemCount={this.state.cart.length}
+          totalPrice={this.state.totalPrice}
         />
         <main className="App-content">
           {this.renderContent()}

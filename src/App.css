@@ -25,6 +25,8 @@
 }
 
 .App-nav-cart {
+  display: flex;
+  flex-direction: row;
   color: grey;
 }
 
@@ -46,4 +48,8 @@
 
 .CartIcon {
   padding-right: 10px;
+}
+
+.TotalPrice {
+  padding-left: 10px;
 }

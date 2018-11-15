@@ -27,13 +27,6 @@
 	border-right: none;
 }
 
-.CartPage-totalPrice {
-	display: flex;
-	justify-content: flex-end;
-	margin: 10px;
-	font-weight: bold;
-}
-
 .CartPage-emptyMessage {
 	display: flex;
 	align-items: center;

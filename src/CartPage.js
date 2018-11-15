@@ -4,12 +4,6 @@ import Item from './Item.js';
 import './CartPage.css';
 
 function CartPage({ items, onAddOne, onRemoveOne }) {
-	let totalPrice = 0;
-	items.map(item => {
-		let itemPrice = item.count*item.price;
-		totalPrice += itemPrice;
-	})
-	
 	return(
 		<div>
 			{items.length > 0 ?
@@ -38,7 +32,6 @@ function CartPage({ items, onAddOne, onRemoveOne }) {
 					<div>Add some stuff!</div>
 				</div>
 			}
-			<div className="CartPage-totalPrice">Total: ${totalPrice}</div>
 		</div>
 	);
 }
