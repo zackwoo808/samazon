@@ -5,7 +5,7 @@ import './CartPage.css';
 
 function CartPage({ items, onAddOne, onRemoveOne }) {
 	return(
-		<div>
+		<div className="CartPage">
 			{items.length > 0 ?
 				<ul className="CartPage-items">
 					{items.map(item =>
@@ -32,6 +32,11 @@ function CartPage({ items, onAddOne, onRemoveOne }) {
 					<div>Add some stuff!</div>
 				</div>
 			}
+			<button
+				className="CartPage-checkoutButton"
+				onClick={() => alert("Haha, you can't afford that!")}>
+				Checkout
+			</button>
 		</div>
 	);
 }
