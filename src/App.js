@@ -81,10 +81,11 @@ class App extends Component {
     let {activeTab} = this.state;
     return (
    	<div className="App">
-        <Nav activeTab={activeTab} onTabChange={this.handleTabChange}/>
-        <div> 
-         {this.state.cart.length} items
-        </div>
+        <Nav
+          activeTab={activeTab}
+          onTabChange={this.handleTabChange}
+          itemCount={this.state.cart.length}
+        />
         <main className="App-content">
           {this.renderContent()}
         </main>
